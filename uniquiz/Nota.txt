@@ -1,0 +1,8 @@
+En el archivo BaseDeDatos.sql esta el script para la creacion de la base de datos con sus respectivos
+insert.
+
+En el archivo Reportes.sql estan los 5 reportes que son a nivel de consola
+
+El archivo ProyectoFinalBases.7z es el comprimido del proyecto hecho en Java con la herramienta
+eclipse, los 2 reportes en grafica. Ademas para la ejecucion de este proyecto estan sus 2 
+librerias para dicho funcionamiento.

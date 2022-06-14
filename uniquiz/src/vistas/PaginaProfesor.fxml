@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="727.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.PaginaProfesorController">
+  <tabs>
+    <Tab text="Crear Examen">
+         <content>
+            <AnchorPane prefHeight="662.0" prefWidth="455.0" style="-fx-background-color: black;">
+               <children>
+                  <VBox layoutX="52.0" layoutY="18.0" prefHeight="410.0" prefWidth="375.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="18.0">
+                     <children>
+                        <ComboBox fx:id="comboGrupo" onAction="#seleccionGrupo" prefHeight="31.0" prefWidth="393.0" promptText="Seleccionar Grupo">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></ComboBox>
+                        <ComboBox fx:id="comboTema" disable="true" onAction="#seleccionTema" prefHeight="31.0" prefWidth="413.0" promptText="Seleccionar Tema">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></ComboBox>
+                        <DatePicker fx:id="fechaInicio" prefHeight="31.0" prefWidth="155.0" promptText="Fecha Inicio">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></DatePicker>
+                        <DatePicker fx:id="fechaFinal" layoutX="10.0" layoutY="45.0" prefHeight="31.0" prefWidth="155.0" promptText="Fecha Final">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></DatePicker>
+                        <HBox prefHeight="15.0" prefWidth="148.0" spacing="3.0">
+                           <children>
+                              <TextField fx:id="textNumeroPreguntas" alignment="CENTER" promptText="#Preguntas">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></TextField>
+                              <TextField fx:id="textMinutos" alignment="CENTER" promptText="Minutos">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="115.0" prefHeight="15.0" prefWidth="148.0" spacing="3.0">
+                           <children>
+                              <TextField fx:id="textPeso" alignment="CENTER" promptText="Peso">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></TextField>
+                              <TextField fx:id="TextUmbral" alignment="CENTER" promptText="Umbral">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="botonConfigurarPreguntas" disable="true" mnemonicParsing="false" onMouseClicked="#abrirPreguntas" prefHeight="29.0" prefWidth="388.0" text="Configurar Preguntas">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="botonCrearExamen" disable="true" mnemonicParsing="false" onMouseClicked="#crearExamen" prefHeight="29.0" prefWidth="393.0" style="-fx-background-color: #E63E1A;" text="Crear Examen" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <AnchorPane layoutX="513.0" layoutY="68.0" prefHeight="361.0" prefWidth="250.0" style="-fx-background-color: #aaaaaa;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <QuadCurve controlY="233.0" endX="125.0" endY="-128.0" layoutX="125.0" layoutY="128.0" startX="-125.0" startY="-128.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label fx:id="labelNombre" alignment="CENTER" layoutY="199.0" prefHeight="52.0" prefWidth="252.0" text="NOMBRE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="199.0">
+                           <font>
+                              <Font name="Playbill" size="50.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="99.0" fitWidth="117.0" layoutX="67.0" layoutY="21.0">
+                           <image>
+                              <Image url="@../../../Proyecto%20Bases/src/img/5.png" />
+                           </image>
+                        </ImageView>
+                        <Line endX="100.0" layoutX="125.0" layoutY="251.0" startX="-100.0" stroke="#ff2b00" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+    <Tab onSelectionChanged="#seleccionReportes" text="Reportes">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <BarChart fx:id="graficoExamenPorGrupo" categoryGap="4.0" layoutX="130.0" layoutY="48.0" prefHeight="377.0" prefWidth="467.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="45.0">
+                     <xAxis>
+                        <CategoryAxis prefHeight="53.0" prefWidth="406.0" side="BOTTOM" tickLabelFill="WHITE" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+                     </yAxis>
+                  </BarChart>
+                  <Label alignment="CENTER" layoutX="162.0" layoutY="14.0" prefHeight="21.0" prefWidth="503.0" text="Examenes por grupo" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="78.0" layoutY="209.0" rotate="-90.0" text="Examenes" textFill="RED" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="45.0" />
+                  <Label alignment="CENTER" layoutX="130.0" layoutY="428.0" prefHeight="21.0" prefWidth="411.0" text="Gupo" textFill="RED" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
